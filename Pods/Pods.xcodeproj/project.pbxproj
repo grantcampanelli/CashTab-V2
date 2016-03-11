@@ -1,0 +1,790 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05AEEB26422A000C073B9F51BC48E524 /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C5D9D0E4B9002BA34720D38549BCDD /* Validatable.swift */; };
+		2D70455B9AAF79F969813FA9CFD0F1A0 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E25A495273D278E50A954E337837F6 /* Validator.swift */; };
+		34570FB4B52DF9086E94BDCB0DBFF399 /* Pods-CashTab-V2-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A9BEAADBEF06443C98AFB23D9A785A94 /* Pods-CashTab-V2-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35AE7B49F40EEF1A7950AC73CE12E607 /* Validator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B2692B7E737A6536ADB26CAFA5DF566A /* Validator-dummy.m */; };
+		36274852983A44D90AF8BD6623C9C95E /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6564838CBC09FA97ACC564635E2BCC86 /* DropDownCell.swift */; };
+		3790AB5F7E0D0B7212111A8C51E95BFE /* Validator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CBF62744D3A2662461DF23E145E67F1 /* Validator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BE5E8AA645562A0B056D3FC895C08EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D635D41133915B228CE899EF89DD95CE /* Foundation.framework */; };
+		3E974515B6D9CAE7E5653259C3CB0E9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D635D41133915B228CE899EF89DD95CE /* Foundation.framework */; };
+		43723431FB799413723E09E44AA66251 /* ValidationRuleLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D93ABE3C5CCD21831287C1F341A39E8 /* ValidationRuleLength.swift */; };
+		494001ECA2DF5E0A8BC0C873964DD532 /* UISlider+Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6B6D259103B86D12DE65E3FDBBCC4E /* UISlider+Validator.swift */; };
+		577F7B4FF4E24C986E9CF527539C3D29 /* UITextField+Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CBCE8AC758167A42CEEB19BDECC6E1 /* UITextField+Validator.swift */; };
+		598C070F40583DD2BCC071F9FA195902 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FA5C53A7089BC93C5A6125CAF95670 /* DropDown.swift */; };
+		6558D23256532713A5221F9A85B8A586 /* ValidationRuleRequired.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78E6F269D0207EBC6CD12202B45D86 /* ValidationRuleRequired.swift */; };
+		66BB0352A39DBA65D56E54FC359C84B3 /* ValidationRuleContains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314D3CC95BBA8D7508C7BE9DBCD8F151 /* ValidationRuleContains.swift */; };
+		6813DCD35E3A7706BCD2B55C9311B245 /* DPDUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682F00118FE7BE1833DFDDBD5DB65C1 /* DPDUIView+Extension.swift */; };
+		6B24A0EFADB9E7311D0015DF0555762B /* ValidationRuleComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AB9715B959691D47808D89B5520509 /* ValidationRuleComparison.swift */; };
+		802275EC8DE8966D3CAA5748E8215D4A /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541B36E5080E7EB54653A2EE102529C9 /* ValidationResult.swift */; };
+		8CFAADAE4DF0C8D64419C8C4868DD6E1 /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6815B77C31250A01B838F53562D84 /* ValidationError.swift */; };
+		9C29655780F544515B947C59F8A66C38 /* ValidationRulePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B6119B1B5B39EE5A0866996A90B0D5 /* ValidationRulePattern.swift */; };
+		9C965BF713E76F6A9E5D5BFB953137DC /* ValidationRuleEquality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5D6A858C18F3D8DEACCC4598CC0A7B /* ValidationRuleEquality.swift */; };
+		A21B773AD62A1F690B27A1E397DE7F12 /* ValidatableInterfaceElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21A28362962D4C5FBCE47022A367EF7 /* ValidatableInterfaceElement.swift */; };
+		B4D4D9EC103EB299A8D5C2FBBC7DD55C /* DPDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B9418D8BF59F5C5A86FF1E4B6BCB89 /* DPDConstants.swift */; };
+		BED3529ADAEA731D20FC3E4E9CDC0612 /* DropDown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E37B006C53C26DB855D3D526A99107 /* DropDown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C1B81A9D7D0CC9A5FF308D652DFD1693 /* ValidationRulePaymentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44897B43256FC035D62BED9E549C772 /* ValidationRulePaymentCard.swift */; };
+		C1C88DA5F92E33C54000C418EAF14010 /* ValidationRuleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C872291BF578D8F43F18055A08EEE4D /* ValidationRuleSet.swift */; };
+		C35C9AC7EB525C6237DA97A5266C8BF1 /* Pods-CashTab-V2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D3432EFFF55A8CED7E6ABE2E92223D6E /* Pods-CashTab-V2-dummy.m */; };
+		C81D069FBB310FBC4F14F28CE159342E /* ValidationRuleURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A21B58E2EC153C55A3316D6FCF3FFF /* ValidationRuleURL.swift */; };
+		D22B504C5A4B9A4477C2CA4BF0B3E1F0 /* ValidationRuleCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B7994DB5FC417B9E27D5BFAC75C6E9 /* ValidationRuleCondition.swift */; };
+		D2E96168290CF22A143DC3A8755DFEC9 /* ValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BC814B47D632BD4D7B101C0514D9B7 /* ValidationRule.swift */; };
+		DADC8AC645D8F2B178352DAD6F299B00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D635D41133915B228CE899EF89DD95CE /* Foundation.framework */; };
+		DCBEF6ADC81E7FBE7B8119BAAD84F256 /* DropDown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF378FB18459DF3434FE82D1A30E8EA /* DropDown-dummy.m */; };
+		DD91BD493087D31E8147B7EEFD77F0CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF066F8D85A4D7A3B3A04D25E4D2AC88 /* UIKit.framework */; };
+		E4001FC14DB1A9490C85D8E43E06813C /* DPDKeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2363198CE317E59DCD95C9CCB22C8B14 /* DPDKeyboardListener.swift */; };
+		F5CB94AB8D1BB56AF6DDED1F226E5128 /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CF35DE896FC8292311DE9437270A9A8 /* DropDownCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		55A837DABF2D9D44CC0D1EDA8D04F74D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E40AB35839B0154D2F8C6153F2DCFEE4;
+			remoteInfo = Validator;
+		};
+		76598DA687166D60A7AC3E0EE7956154 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67D807208F62081EBD013D6EDE715B9B;
+			remoteInfo = DropDown;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01B13FF2A0093BAA6DF64A9557630521 /* DropDown.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DropDown.xcconfig; sourceTree = "<group>"; };
+		01B9418D8BF59F5C5A86FF1E4B6BCB89 /* DPDConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDConstants.swift; path = DropDown/helpers/DPDConstants.swift; sourceTree = "<group>"; };
+		02ACC68449D58C95A5394F9BADE69C77 /* Validator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Validator.xcconfig; sourceTree = "<group>"; };
+		0B0463756F055A08E4085618CE2141B2 /* DropDown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-prefix.pch"; sourceTree = "<group>"; };
+		13BC814B47D632BD4D7B101C0514D9B7 /* ValidationRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValidationRule.swift; path = Validator/Validator/ValidationRule.swift; sourceTree = "<group>"; };
+		214B28121E26626129B7043DEB3AC5CC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2363198CE317E59DCD95C9CCB22C8B14 /* DPDKeyboardListener.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDKeyboardListener.swift; path = DropDown/helpers/DPDKeyboardListener.swift; sourceTree = "<group>"; };
+		2CBF62744D3A2662461DF23E145E67F1 /* Validator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Validator-umbrella.h"; sourceTree = "<group>"; };
+		2D5D6A858C18F3D8DEACCC4598CC0A7B /* ValidationRuleEquality.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValidationRuleEquality.swift; path = Validator/Validator/Rules/ValidationRuleEquality.swift; sourceTree = "<group>"; };
+		2F60BB7985B3609BFD8ED6576C23F58C /* Validator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Validator.modulemap; sourceTree = "<group>"; };
+		30AB9715B959691D47808D89B5520509 /* ValidationRuleComparison.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValidationRuleComparison.swift; path = Validator/Validator/Rules/ValidationRuleComparison.swift; sourceTree = "<group>"; };
+		314D3CC95BBA8D7508C7BE9DBCD8F151 /* ValidationRuleContains.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValidationRuleContains.swift; path = Validator/Validator/Rules/ValidationRuleContains.swift; sourceTree = "<group>"; };
+		3ABC8D1A5E52BAA75E30EB24FDEDECE0 /* DropDown.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DropDown.modulemap; sourceTree = "<group>"; };
+		3C872291BF578D8F43F18055A08EEE4D /* ValidationRuleSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValidationRuleSet.swift; path = Validator/Validator/ValidationRuleSet.swift; sourceTree = "<group>"; };
+		3D93ABE3C5CCD21831287C1F341A39E8 /* ValidationRuleLength.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValidationRuleLength.swift; path = Validator/Validator/Rules/ValidationRuleLength.swift; sourceTree = "<group>"; };
+		471F130BAE262F2952F5C6935514D11C /* Pods-CashTab-V2-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CashTab-V2-acknowledgements.markdown"; sourceTree = "<group>"; };
+		541B36E5080E7EB54653A2EE102529C9 /* ValidationResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValidationResult.swift; path = Validator/Validator/ValidationResult.swift; sourceTree = "<group>"; };
+		55B6119B1B5B39EE5A0866996A90B0D5 /* ValidationRulePattern.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValidationRulePattern.swift; path = Validator/Validator/Rules/ValidationRulePattern.swift; sourceTree = "<group>"; };
+		5798A1EAE758D40B8A65DF98C4192B35 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AAC804E56752D4A7946F202ABD0D361 /* Pods-CashTab-V2-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CashTab-V2-frameworks.sh"; sourceTree = "<group>"; };
+		5D254A1F890DC30CB1817069560C146C /* Pods-CashTab-V2.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CashTab-V2.modulemap"; sourceTree = "<group>"; };
+		5EB6DFBD7E9B09E745174DA875DB94E1 /* Pods-CashTab-V2-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CashTab-V2-resources.sh"; sourceTree = "<group>"; };
+		6564838CBC09FA97ACC564635E2BCC86 /* DropDownCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDownCell.swift; path = DropDown/src/DropDownCell.swift; sourceTree = "<group>"; };
+		70E37B006C53C26DB855D3D526A99107 /* DropDown-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-umbrella.h"; sourceTree = "<group>"; };
+		73E25A495273D278E50A954E337837F6 /* Validator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validator.swift; path = Validator/Validator/Validator.swift; sourceTree = "<group>"; };
+		76A21B58E2EC153C55A3316D6FCF3FFF /* ValidationRuleURL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValidationRuleURL.swift; path = Validator/Validator/Rules/ValidationRuleURL.swift; sourceTree = "<group>"; };
+		82FA5C53A7089BC93C5A6125CAF95670 /* DropDown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDown.swift; path = DropDown/src/DropDown.swift; sourceTree = "<group>"; };
+		85F2FEB75CBBCA7378E7785C34EC4B2F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DD6815B77C31250A01B838F53562D84 /* ValidationError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValidationError.swift; path = Validator/Validator/ValidationError.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9CF35DE896FC8292311DE9437270A9A8 /* DropDownCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = DropDownCell.xib; path = DropDown/resources/DropDownCell.xib; sourceTree = "<group>"; };
+		A3B7994DB5FC417B9E27D5BFAC75C6E9 /* ValidationRuleCondition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValidationRuleCondition.swift; path = Validator/Validator/Rules/ValidationRuleCondition.swift; sourceTree = "<group>"; };
+		A6CBCE8AC758167A42CEEB19BDECC6E1 /* UITextField+Validator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+Validator.swift"; path = "Validator/Validator/UIKit+Validator/UITextField+Validator.swift"; sourceTree = "<group>"; };
+		A9BEAADBEF06443C98AFB23D9A785A94 /* Pods-CashTab-V2-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CashTab-V2-umbrella.h"; sourceTree = "<group>"; };
+		ACF378FB18459DF3434FE82D1A30E8EA /* DropDown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DropDown-dummy.m"; sourceTree = "<group>"; };
+		AF066F8D85A4D7A3B3A04D25E4D2AC88 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		B2692B7E737A6536ADB26CAFA5DF566A /* Validator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Validator-dummy.m"; sourceTree = "<group>"; };
+		B38459649943BBED17EFCD7138FB51FD /* Pods-CashTab-V2-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CashTab-V2-acknowledgements.plist"; sourceTree = "<group>"; };
+		BB6B6D259103B86D12DE65E3FDBBCC4E /* UISlider+Validator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISlider+Validator.swift"; path = "Validator/Validator/UIKit+Validator/UISlider+Validator.swift"; sourceTree = "<group>"; };
+		BDDE15BAC409D086518444B92461F6BA /* Pods-CashTab-V2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CashTab-V2.release.xcconfig"; sourceTree = "<group>"; };
+		BF5F86849AB5EEDAD999B831833A4A15 /* DropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0B2221C19F85D5BA1A77326163A9AE /* Pods-CashTab-V2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CashTab-V2.debug.xcconfig"; sourceTree = "<group>"; };
+		D3432EFFF55A8CED7E6ABE2E92223D6E /* Pods-CashTab-V2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CashTab-V2-dummy.m"; sourceTree = "<group>"; };
+		D635D41133915B228CE899EF89DD95CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D682F00118FE7BE1833DFDDBD5DB65C1 /* DPDUIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DPDUIView+Extension.swift"; path = "DropDown/helpers/DPDUIView+Extension.swift"; sourceTree = "<group>"; };
+		DF78E6F269D0207EBC6CD12202B45D86 /* ValidationRuleRequired.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValidationRuleRequired.swift; path = Validator/Validator/Rules/ValidationRuleRequired.swift; sourceTree = "<group>"; };
+		E21A28362962D4C5FBCE47022A367EF7 /* ValidatableInterfaceElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValidatableInterfaceElement.swift; path = "Validator/Validator/UIKit+Validator/ValidatableInterfaceElement.swift"; sourceTree = "<group>"; };
+		E7ADFE12E942968B95C822ADFCB43021 /* Validator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Validator-prefix.pch"; sourceTree = "<group>"; };
+		EAB5F3621E737CBD927C3F407D2C5055 /* Validator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Validator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F44897B43256FC035D62BED9E549C772 /* ValidationRulePaymentCard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValidationRulePaymentCard.swift; path = Validator/Validator/Rules/ValidationRulePaymentCard.swift; sourceTree = "<group>"; };
+		F6C5D9D0E4B9002BA34720D38549BCDD /* Validatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validatable.swift; path = Validator/Validator/Validatable.swift; sourceTree = "<group>"; };
+		F7905CC36FDBA3B80883F61C5449EEC5 /* Pods_CashTab_V2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CashTab_V2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0433A2296E5FC7822F17ADC18D064B07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E974515B6D9CAE7E5653259C3CB0E9F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		690C760F4D24C54A05EEF77E4A752B6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BE5E8AA645562A0B056D3FC895C08EC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A352F4D94304E92610FC7B8A6017620D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DADC8AC645D8F2B178352DAD6F299B00 /* Foundation.framework in Frameworks */,
+				DD91BD493087D31E8147B7EEFD77F0CE /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07C007C4686AF1DFBE4A50B27FA7C174 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF5F86849AB5EEDAD999B831833A4A15 /* DropDown.framework */,
+				F7905CC36FDBA3B80883F61C5449EEC5 /* Pods_CashTab_V2.framework */,
+				EAB5F3621E737CBD927C3F407D2C5055 /* Validator.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B6A0AFA5C3C772EAC7BB6960D66ABCD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4584F292D00A7892ED0D61E551B687A0 /* DropDown */,
+				DA6B65B52484492581C681D24727BAD5 /* Validator */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		369BD3D52BC7767A778B401334B1EA15 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5A15B5CDB81AAF5A99BB67AACF664AE7 /* Pods-CashTab-V2 */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E294F3BD993E240DCFCB4DC1329C9F36 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4584F292D00A7892ED0D61E551B687A0 /* DropDown */ = {
+			isa = PBXGroup;
+			children = (
+				01B9418D8BF59F5C5A86FF1E4B6BCB89 /* DPDConstants.swift */,
+				2363198CE317E59DCD95C9CCB22C8B14 /* DPDKeyboardListener.swift */,
+				D682F00118FE7BE1833DFDDBD5DB65C1 /* DPDUIView+Extension.swift */,
+				82FA5C53A7089BC93C5A6125CAF95670 /* DropDown.swift */,
+				6564838CBC09FA97ACC564635E2BCC86 /* DropDownCell.swift */,
+				7214A9F1E11258468C30BA6CAB36824F /* Resources */,
+				59D57453805A36F9D369E1396B8AD17F /* Support Files */,
+			);
+			path = DropDown;
+			sourceTree = "<group>";
+		};
+		59D57453805A36F9D369E1396B8AD17F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3ABC8D1A5E52BAA75E30EB24FDEDECE0 /* DropDown.modulemap */,
+				01B13FF2A0093BAA6DF64A9557630521 /* DropDown.xcconfig */,
+				ACF378FB18459DF3434FE82D1A30E8EA /* DropDown-dummy.m */,
+				0B0463756F055A08E4085618CE2141B2 /* DropDown-prefix.pch */,
+				70E37B006C53C26DB855D3D526A99107 /* DropDown-umbrella.h */,
+				85F2FEB75CBBCA7378E7785C34EC4B2F /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DropDown";
+			sourceTree = "<group>";
+		};
+		5A15B5CDB81AAF5A99BB67AACF664AE7 /* Pods-CashTab-V2 */ = {
+			isa = PBXGroup;
+			children = (
+				5798A1EAE758D40B8A65DF98C4192B35 /* Info.plist */,
+				5D254A1F890DC30CB1817069560C146C /* Pods-CashTab-V2.modulemap */,
+				471F130BAE262F2952F5C6935514D11C /* Pods-CashTab-V2-acknowledgements.markdown */,
+				B38459649943BBED17EFCD7138FB51FD /* Pods-CashTab-V2-acknowledgements.plist */,
+				D3432EFFF55A8CED7E6ABE2E92223D6E /* Pods-CashTab-V2-dummy.m */,
+				5AAC804E56752D4A7946F202ABD0D361 /* Pods-CashTab-V2-frameworks.sh */,
+				5EB6DFBD7E9B09E745174DA875DB94E1 /* Pods-CashTab-V2-resources.sh */,
+				A9BEAADBEF06443C98AFB23D9A785A94 /* Pods-CashTab-V2-umbrella.h */,
+				CE0B2221C19F85D5BA1A77326163A9AE /* Pods-CashTab-V2.debug.xcconfig */,
+				BDDE15BAC409D086518444B92461F6BA /* Pods-CashTab-V2.release.xcconfig */,
+			);
+			name = "Pods-CashTab-V2";
+			path = "Target Support Files/Pods-CashTab-V2";
+			sourceTree = "<group>";
+		};
+		7214A9F1E11258468C30BA6CAB36824F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9CF35DE896FC8292311DE9437270A9A8 /* DropDownCell.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				2B6A0AFA5C3C772EAC7BB6960D66ABCD /* Pods */,
+				07C007C4686AF1DFBE4A50B27FA7C174 /* Products */,
+				369BD3D52BC7767A778B401334B1EA15 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		C068CFE8D9B1B5D76A06763C1A804485 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				214B28121E26626129B7043DEB3AC5CC /* Info.plist */,
+				2F60BB7985B3609BFD8ED6576C23F58C /* Validator.modulemap */,
+				02ACC68449D58C95A5394F9BADE69C77 /* Validator.xcconfig */,
+				B2692B7E737A6536ADB26CAFA5DF566A /* Validator-dummy.m */,
+				E7ADFE12E942968B95C822ADFCB43021 /* Validator-prefix.pch */,
+				2CBF62744D3A2662461DF23E145E67F1 /* Validator-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Validator";
+			sourceTree = "<group>";
+		};
+		DA6B65B52484492581C681D24727BAD5 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				BB6B6D259103B86D12DE65E3FDBBCC4E /* UISlider+Validator.swift */,
+				A6CBCE8AC758167A42CEEB19BDECC6E1 /* UITextField+Validator.swift */,
+				F6C5D9D0E4B9002BA34720D38549BCDD /* Validatable.swift */,
+				E21A28362962D4C5FBCE47022A367EF7 /* ValidatableInterfaceElement.swift */,
+				8DD6815B77C31250A01B838F53562D84 /* ValidationError.swift */,
+				541B36E5080E7EB54653A2EE102529C9 /* ValidationResult.swift */,
+				13BC814B47D632BD4D7B101C0514D9B7 /* ValidationRule.swift */,
+				30AB9715B959691D47808D89B5520509 /* ValidationRuleComparison.swift */,
+				A3B7994DB5FC417B9E27D5BFAC75C6E9 /* ValidationRuleCondition.swift */,
+				314D3CC95BBA8D7508C7BE9DBCD8F151 /* ValidationRuleContains.swift */,
+				2D5D6A858C18F3D8DEACCC4598CC0A7B /* ValidationRuleEquality.swift */,
+				3D93ABE3C5CCD21831287C1F341A39E8 /* ValidationRuleLength.swift */,
+				55B6119B1B5B39EE5A0866996A90B0D5 /* ValidationRulePattern.swift */,
+				F44897B43256FC035D62BED9E549C772 /* ValidationRulePaymentCard.swift */,
+				DF78E6F269D0207EBC6CD12202B45D86 /* ValidationRuleRequired.swift */,
+				3C872291BF578D8F43F18055A08EEE4D /* ValidationRuleSet.swift */,
+				76A21B58E2EC153C55A3316D6FCF3FFF /* ValidationRuleURL.swift */,
+				73E25A495273D278E50A954E337837F6 /* Validator.swift */,
+				C068CFE8D9B1B5D76A06763C1A804485 /* Support Files */,
+			);
+			path = Validator;
+			sourceTree = "<group>";
+		};
+		E294F3BD993E240DCFCB4DC1329C9F36 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D635D41133915B228CE899EF89DD95CE /* Foundation.framework */,
+				AF066F8D85A4D7A3B3A04D25E4D2AC88 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4F0BF5FDD9D480FF34B140B02D78B5FD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3790AB5F7E0D0B7212111A8C51E95BFE /* Validator-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D5AE27D41C4805264F1A72E8AB89EA0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BED3529ADAEA731D20FC3E4E9CDC0612 /* DropDown-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D80FB2D888AD427EE837A931D612CFFD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34570FB4B52DF9086E94BDCB0DBFF399 /* Pods-CashTab-V2-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3EA73C41B5CCAFE037DCD590459D437B /* Pods-CashTab-V2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3177C1057EF7082332A405C3B0475593 /* Build configuration list for PBXNativeTarget "Pods-CashTab-V2" */;
+			buildPhases = (
+				64F977F965048BBC335BC37417B37585 /* Sources */,
+				690C760F4D24C54A05EEF77E4A752B6A /* Frameworks */,
+				D80FB2D888AD427EE837A931D612CFFD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD2C8FAFD0FE80E5AFA99D275FF64E3F /* PBXTargetDependency */,
+				7CCC722C891E633A09A44DBEC68E609C /* PBXTargetDependency */,
+			);
+			name = "Pods-CashTab-V2";
+			productName = "Pods-CashTab-V2";
+			productReference = F7905CC36FDBA3B80883F61C5449EEC5 /* Pods_CashTab_V2.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		67D807208F62081EBD013D6EDE715B9B /* DropDown */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECBDA6C29891F92A1FD11886C83F52CD /* Build configuration list for PBXNativeTarget "DropDown" */;
+			buildPhases = (
+				EBE165E5622E1AE7859940168A65BF8C /* Sources */,
+				0433A2296E5FC7822F17ADC18D064B07 /* Frameworks */,
+				FE50D37FEFA552A3FE4B11FDC628BCC1 /* Resources */,
+				6D5AE27D41C4805264F1A72E8AB89EA0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DropDown;
+			productName = DropDown;
+			productReference = BF5F86849AB5EEDAD999B831833A4A15 /* DropDown.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E40AB35839B0154D2F8C6153F2DCFEE4 /* Validator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70AE318BC9201C0DC02DC9858F388BA8 /* Build configuration list for PBXNativeTarget "Validator" */;
+			buildPhases = (
+				94C875711D05C76F2D9BDFEC328A069B /* Sources */,
+				A352F4D94304E92610FC7B8A6017620D /* Frameworks */,
+				4F0BF5FDD9D480FF34B140B02D78B5FD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Validator;
+			productName = Validator;
+			productReference = EAB5F3621E737CBD927C3F407D2C5055 /* Validator.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 07C007C4686AF1DFBE4A50B27FA7C174 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				67D807208F62081EBD013D6EDE715B9B /* DropDown */,
+				3EA73C41B5CCAFE037DCD590459D437B /* Pods-CashTab-V2 */,
+				E40AB35839B0154D2F8C6153F2DCFEE4 /* Validator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE50D37FEFA552A3FE4B11FDC628BCC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5CB94AB8D1BB56AF6DDED1F226E5128 /* DropDownCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		64F977F965048BBC335BC37417B37585 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C35C9AC7EB525C6237DA97A5266C8BF1 /* Pods-CashTab-V2-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94C875711D05C76F2D9BDFEC328A069B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				494001ECA2DF5E0A8BC0C873964DD532 /* UISlider+Validator.swift in Sources */,
+				577F7B4FF4E24C986E9CF527539C3D29 /* UITextField+Validator.swift in Sources */,
+				05AEEB26422A000C073B9F51BC48E524 /* Validatable.swift in Sources */,
+				A21B773AD62A1F690B27A1E397DE7F12 /* ValidatableInterfaceElement.swift in Sources */,
+				8CFAADAE4DF0C8D64419C8C4868DD6E1 /* ValidationError.swift in Sources */,
+				802275EC8DE8966D3CAA5748E8215D4A /* ValidationResult.swift in Sources */,
+				D2E96168290CF22A143DC3A8755DFEC9 /* ValidationRule.swift in Sources */,
+				6B24A0EFADB9E7311D0015DF0555762B /* ValidationRuleComparison.swift in Sources */,
+				D22B504C5A4B9A4477C2CA4BF0B3E1F0 /* ValidationRuleCondition.swift in Sources */,
+				66BB0352A39DBA65D56E54FC359C84B3 /* ValidationRuleContains.swift in Sources */,
+				9C965BF713E76F6A9E5D5BFB953137DC /* ValidationRuleEquality.swift in Sources */,
+				43723431FB799413723E09E44AA66251 /* ValidationRuleLength.swift in Sources */,
+				9C29655780F544515B947C59F8A66C38 /* ValidationRulePattern.swift in Sources */,
+				C1B81A9D7D0CC9A5FF308D652DFD1693 /* ValidationRulePaymentCard.swift in Sources */,
+				6558D23256532713A5221F9A85B8A586 /* ValidationRuleRequired.swift in Sources */,
+				C1C88DA5F92E33C54000C418EAF14010 /* ValidationRuleSet.swift in Sources */,
+				C81D069FBB310FBC4F14F28CE159342E /* ValidationRuleURL.swift in Sources */,
+				35AE7B49F40EEF1A7950AC73CE12E607 /* Validator-dummy.m in Sources */,
+				2D70455B9AAF79F969813FA9CFD0F1A0 /* Validator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBE165E5622E1AE7859940168A65BF8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4D4D9EC103EB299A8D5C2FBBC7DD55C /* DPDConstants.swift in Sources */,
+				E4001FC14DB1A9490C85D8E43E06813C /* DPDKeyboardListener.swift in Sources */,
+				6813DCD35E3A7706BCD2B55C9311B245 /* DPDUIView+Extension.swift in Sources */,
+				DCBEF6ADC81E7FBE7B8119BAAD84F256 /* DropDown-dummy.m in Sources */,
+				598C070F40583DD2BCC071F9FA195902 /* DropDown.swift in Sources */,
+				36274852983A44D90AF8BD6623C9C95E /* DropDownCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7CCC722C891E633A09A44DBEC68E609C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Validator;
+			target = E40AB35839B0154D2F8C6153F2DCFEE4 /* Validator */;
+			targetProxy = 55A837DABF2D9D44CC0D1EDA8D04F74D /* PBXContainerItemProxy */;
+		};
+		DD2C8FAFD0FE80E5AFA99D275FF64E3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DropDown;
+			target = 67D807208F62081EBD013D6EDE715B9B /* DropDown */;
+			targetProxy = 76598DA687166D60A7AC3E0EE7956154 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0C0828B6E8BC8B67054AF1049AD6DE26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE0B2221C19F85D5BA1A77326163A9AE /* Pods-CashTab-V2.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CashTab-V2/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CashTab-V2/Pods-CashTab-V2.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_CashTab_V2;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		811519CB8F683AC06F9C98B55AC40F11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		882EB4391EC2E701934974DA86F7343F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		88984F230D84F05E0FF79CDCBF361691 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02ACC68449D58C95A5394F9BADE69C77 /* Validator.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Validator/Validator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Validator/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Validator/Validator.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Validator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		97DC6FB3C355A0D192A0206F31B20641 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02ACC68449D58C95A5394F9BADE69C77 /* Validator.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Validator/Validator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Validator/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Validator/Validator.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Validator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D09A2926A41EDBD2531DB3038EFBB65E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01B13FF2A0093BAA6DF64A9557630521 /* DropDown.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DropDown/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DropDown/DropDown.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = DropDown;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E28949C93A1BEA30053A21DA78F46726 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01B13FF2A0093BAA6DF64A9557630521 /* DropDown.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DropDown/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DropDown/DropDown.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = DropDown;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FCA75232CEC1F6055BF7F189F7F2C0AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDDE15BAC409D086518444B92461F6BA /* Pods-CashTab-V2.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CashTab-V2/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CashTab-V2/Pods-CashTab-V2.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_CashTab_V2;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				882EB4391EC2E701934974DA86F7343F /* Debug */,
+				811519CB8F683AC06F9C98B55AC40F11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3177C1057EF7082332A405C3B0475593 /* Build configuration list for PBXNativeTarget "Pods-CashTab-V2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C0828B6E8BC8B67054AF1049AD6DE26 /* Debug */,
+				FCA75232CEC1F6055BF7F189F7F2C0AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70AE318BC9201C0DC02DC9858F388BA8 /* Build configuration list for PBXNativeTarget "Validator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88984F230D84F05E0FF79CDCBF361691 /* Debug */,
+				97DC6FB3C355A0D192A0206F31B20641 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECBDA6C29891F92A1FD11886C83F52CD /* Build configuration list for PBXNativeTarget "DropDown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E28949C93A1BEA30053A21DA78F46726 /* Debug */,
+				D09A2926A41EDBD2531DB3038EFBB65E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

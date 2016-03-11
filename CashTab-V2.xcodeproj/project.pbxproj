@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6A8105D11C9257EA00B994B6 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8105D01C9257EA00B994B6 /* TransactionTableViewCell.swift */; };
+		6A8105D31C92907E00B994B6 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8105D21C92907E00B994B6 /* TransactionTableViewCell.swift */; };
 		6AED2BC51C922FBB00404DE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AED2BC41C922FBB00404DE1 /* AppDelegate.swift */; };
 		6AED2BC81C922FBB00404DE1 /* CashTab_V2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6AED2BC61C922FBB00404DE1 /* CashTab_V2.xcdatamodeld */; };
 		6AED2BCA1C922FBB00404DE1 /* TransactionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AED2BC91C922FBB00404DE1 /* TransactionTableViewController.swift */; };
@@ -16,10 +16,12 @@
 		6AED2BD11C922FBB00404DE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AED2BD01C922FBB00404DE1 /* Assets.xcassets */; };
 		6AED2BD41C922FBB00404DE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AED2BD21C922FBB00404DE1 /* LaunchScreen.storyboard */; };
 		6AED2BDC1C9239A000404DE1 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AED2BDB1C9239A000404DE1 /* AddTransactionViewController.swift */; };
+		7CF5A9BBD743358E515C5DE8 /* Pods_CashTab_V2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED036883B86712673149378 /* Pods_CashTab_V2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6A8105D01C9257EA00B994B6 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransactionTableViewCell.swift; path = ../TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		0ED036883B86712673149378 /* Pods_CashTab_V2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CashTab_V2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A8105D21C92907E00B994B6 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		6AED2BC11C922FBB00404DE1 /* CashTab-V2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CashTab-V2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AED2BC41C922FBB00404DE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AED2BC71C922FBB00404DE1 /* CashTab_V2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CashTab_V2.xcdatamodel; sourceTree = "<group>"; };
@@ -30,6 +32,8 @@
 		6AED2BD31C922FBB00404DE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6AED2BD51C922FBB00404DE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AED2BDB1C9239A000404DE1 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
+		8BA641570FC3471E26681DDC /* Pods-CashTab-V2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CashTab-V2.release.xcconfig"; path = "Pods/Target Support Files/Pods-CashTab-V2/Pods-CashTab-V2.release.xcconfig"; sourceTree = "<group>"; };
+		F776F2F4C832F7854C0E1F0E /* Pods-CashTab-V2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CashTab-V2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CashTab-V2/Pods-CashTab-V2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CF5A9BBD743358E515C5DE8 /* Pods_CashTab_V2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F752473658EC1CF4DA2B5EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0ED036883B86712673149378 /* Pods_CashTab_V2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A6CAA3717AD376091CAE3C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F776F2F4C832F7854C0E1F0E /* Pods-CashTab-V2.debug.xcconfig */,
+				8BA641570FC3471E26681DDC /* Pods-CashTab-V2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6AED2BB81C922FBB00404DE1 = {
 			isa = PBXGroup;
 			children = (
 				6AED2BC31C922FBB00404DE1 /* CashTab-V2 */,
 				6AED2BC21C922FBB00404DE1 /* Products */,
+				5A6CAA3717AD376091CAE3C2 /* Pods */,
+				1F752473658EC1CF4DA2B5EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				6AED2BC41C922FBB00404DE1 /* AppDelegate.swift */,
-				6A8105D01C9257EA00B994B6 /* TransactionTableViewCell.swift */,
 				6AED2BC91C922FBB00404DE1 /* TransactionTableViewController.swift */,
+				6A8105D21C92907E00B994B6 /* TransactionTableViewCell.swift */,
 				6AED2BCB1C922FBB00404DE1 /* TransactionDetailViewController.swift */,
 				6AED2BDB1C9239A000404DE1 /* AddTransactionViewController.swift */,
 				6AED2BCD1C922FBB00404DE1 /* Main.storyboard */,
@@ -83,9 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6AED2BD81C922FBB00404DE1 /* Build configuration list for PBXNativeTarget "CashTab-V2" */;
 			buildPhases = (
+				B501FB258AC1242E68A5C3A0 /* 📦 Check Pods Manifest.lock */,
 				6AED2BBD1C922FBB00404DE1 /* Sources */,
 				6AED2BBE1C922FBB00404DE1 /* Frameworks */,
 				6AED2BBF1C922FBB00404DE1 /* Resources */,
+				1B209741E5BBBBB3E10A8A6F /* 📦 Embed Pods Frameworks */,
+				20EC59DA5FFCC812EBC12FCB /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -142,6 +169,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B209741E5BBBBB3E10A8A6F /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CashTab-V2/Pods-CashTab-V2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		20EC59DA5FFCC812EBC12FCB /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CashTab-V2/Pods-CashTab-V2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B501FB258AC1242E68A5C3A0 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6AED2BBD1C922FBB00404DE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -151,7 +226,7 @@
 				6AED2BC51C922FBB00404DE1 /* AppDelegate.swift in Sources */,
 				6AED2BDC1C9239A000404DE1 /* AddTransactionViewController.swift in Sources */,
 				6AED2BCA1C922FBB00404DE1 /* TransactionTableViewController.swift in Sources */,
-				6A8105D11C9257EA00B994B6 /* TransactionTableViewCell.swift in Sources */,
+				6A8105D31C92907E00B994B6 /* TransactionTableViewCell.swift in Sources */,
 				6AED2BCC1C922FBB00404DE1 /* TransactionDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +338,7 @@
 		};
 		6AED2BD91C922FBB00404DE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F776F2F4C832F7854C0E1F0E /* Pods-CashTab-V2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "CashTab-V2/Info.plist";
@@ -274,6 +350,7 @@
 		};
 		6AED2BDA1C922FBB00404DE1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BA641570FC3471E26681DDC /* Pods-CashTab-V2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "CashTab-V2/Info.plist";

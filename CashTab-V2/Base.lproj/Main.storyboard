@@ -87,7 +87,7 @@
                                 <rect key="frame" x="0.0" y="86" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="titleLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hd-Ld-VDC">
@@ -216,7 +216,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YlS-SF-zBO" id="9e7-4h-KZH">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -262,7 +262,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Kh4-sr-Xja">
-                                <rect key="frame" x="186" y="88" width="228" height="182"/>
+                                <rect key="frame" x="186" y="88" width="228" height="220"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Transaction Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQ6-Cf-j7z">
                                         <rect key="frame" x="48" y="0.0" width="132" height="30"/>
@@ -282,7 +282,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" horizontalCompressionResistancePriority="250" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I5Z-df-x8A">
-                                        <rect key="frame" x="88" y="114" width="53" height="30"/>
+                                        <rect key="frame" x="87" y="114" width="53" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3W-Wr-BNd">
                                                 <rect key="frame" x="0.0" y="0.0" width="11" height="30"/>
@@ -298,16 +298,32 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.8576775196335078" green="0.8576775196335078" blue="0.8576775196335078" alpha="1" colorSpace="calibratedRGB"/>
                                     </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYd-ub-9BC">
+                                        <rect key="frame" x="93" y="152" width="42" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YT5-wK-zCy">
-                                        <rect key="frame" x="65" y="152" width="98" height="30"/>
+                                        <rect key="frame" x="65" y="190" width="98" height="30"/>
                                         <state key="normal" title="Do Something"/>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IKN-6L-gQz">
+                                <rect key="frame" x="0.0" y="384" width="600" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ot7-Cb-DNl" id="fLl-YW-gDa"/>
+                                    <outlet property="delegate" destination="ot7-Cb-DNl" id="Rfh-CD-SSD"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="IKN-6L-gQz" firstAttribute="leading" secondItem="Hzf-aK-qss" secondAttribute="leadingMargin" constant="-20" id="6CF-68-5Ys"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IKN-6L-gQz" secondAttribute="trailing" constant="-20" id="Fh2-Bp-3D4"/>
                             <constraint firstItem="Kh4-sr-Xja" firstAttribute="centerX" secondItem="Hzf-aK-qss" secondAttribute="centerX" id="cZm-sF-gwg"/>
+                            <constraint firstItem="IKN-6L-gQz" firstAttribute="top" secondItem="Kh4-sr-Xja" secondAttribute="bottom" constant="76" id="hwP-jI-fct"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Transaction" id="Faq-Ex-vlF">

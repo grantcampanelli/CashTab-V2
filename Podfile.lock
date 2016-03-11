@@ -1,0 +1,15 @@
+PODS:
+  - DropDown (0.1.4)
+  - Validator (1.1.1)
+
+DEPENDENCIES:
+  - DropDown
+  - Validator
+
+SPEC CHECKSUMS:
+  DropDown: 09ab078ba0f11d426689526b45d4d5179420e321
+  Validator: e17f25fe03c32590be0a9d7d46a779c9ec5dd3b3
+
+PODFILE CHECKSUM: f7b0310de7a0de53de8f0458f53cdf4e3da54ca2
+
+COCOAPODS: 1.0.0.beta.5
