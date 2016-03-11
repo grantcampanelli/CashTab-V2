@@ -92,7 +92,7 @@ class TransactionTableViewController: UITableViewController, NSFetchedResultsCon
     }
     
     
-    @IBAction func addNewTransaction(sender: AnyObject) {
+    @IBAction func addNewTransactionButton(sender: AnyObject) {
         
         let alert = UIAlertController(title: "New Transaction", message: "Add a new transaction", preferredStyle: .Alert)
         
