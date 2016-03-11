@@ -24,16 +24,4 @@ class AddTranscationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var costLabel: UILabel!
     @IBOutlet weak var titleTextField: UITextField!
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return categories.count
-    }
-    
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        return categories[row]
-    }
-    
 }

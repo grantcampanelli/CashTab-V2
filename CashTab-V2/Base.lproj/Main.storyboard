@@ -310,20 +310,10 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IKN-6L-gQz">
-                                <rect key="frame" x="0.0" y="384" width="600" height="216"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="ot7-Cb-DNl" id="fLl-YW-gDa"/>
-                                    <outlet property="delegate" destination="ot7-Cb-DNl" id="Rfh-CD-SSD"/>
-                                </connections>
-                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="IKN-6L-gQz" firstAttribute="leading" secondItem="Hzf-aK-qss" secondAttribute="leadingMargin" constant="-20" id="6CF-68-5Ys"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="IKN-6L-gQz" secondAttribute="trailing" constant="-20" id="Fh2-Bp-3D4"/>
                             <constraint firstItem="Kh4-sr-Xja" firstAttribute="centerX" secondItem="Hzf-aK-qss" secondAttribute="centerX" id="cZm-sF-gwg"/>
-                            <constraint firstItem="IKN-6L-gQz" firstAttribute="top" secondItem="Kh4-sr-Xja" secondAttribute="bottom" constant="76" id="hwP-jI-fct"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Transaction" id="Faq-Ex-vlF">
