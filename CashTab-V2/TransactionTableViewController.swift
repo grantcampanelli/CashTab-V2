@@ -9,12 +9,22 @@
 import UIKit
 import CoreData
 
+//// Custom UITableViewCell allowing for customized prototype cells (Configureable in Storyboard)
+//class TransactionViewCell: UITableViewCell {
+//    @IBOutlet weak var title: UILabel!
+//    @IBOutlet weak var cost: UILabel!
+//    var test: String?
+//    
+//    var thisTransaction: NSManagedObject?
+//}
+
+
 class TransactionTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
     var detailViewController: TransactionDetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
 
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -27,6 +37,7 @@ class TransactionTableViewController: UITableViewController, NSFetchedResultsCon
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? TransactionDetailViewController
         }
+        
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -59,8 +70,29 @@ class TransactionTableViewController: UITableViewController, NSFetchedResultsCon
         }
     }
     
+    func insertNewTransaction(title: String, cost: String) {
+        let context = self.fetchedResultsController.managedObjectContext
+        let entity = self.fetchedResultsController.fetchRequest.entity!
+        let newManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entity.name!, inManagedObjectContext: context)
+        
+        // If appropriate, configure the new managed object.
+        // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
+        newManagedObject.setValue(title, forKey: "title")
+        newManagedObject.setValue(cost, forKey: "cost")
+        
+        // Save the context.
+        do {
+            try context.save()
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            //print("Unresolved error \(error), \(error.userInfo)")
+            abort()
+        }
+    }
     
-    @IBAction func addTransaction(sender: AnyObject) {
+    
+    @IBAction func addNewTransaction(sender: AnyObject) {
         
         let alert = UIAlertController(title: "New Transaction", message: "Add a new transaction", preferredStyle: .Alert)
         
@@ -71,6 +103,7 @@ class TransactionTableViewController: UITableViewController, NSFetchedResultsCon
             handler: { (action:UIAlertAction) -> Void in
                 let transactionTitle = alert.textFields![0]
                 let transactionCost = alert.textFields![1]
+                self.insertNewTransaction(transactionTitle.text!, cost: transactionCost.text!);
                 //self.saveTransaction(transactionTitle.text!, cost: transactionCost.text!)
                 //self.reloadData()
         })
@@ -118,16 +151,21 @@ class TransactionTableViewController: UITableViewController, NSFetchedResultsCon
     // MARK: - Table View
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        //return 1;
         return self.fetchedResultsController.sections?.count ?? 0
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //return 5;
         let sectionInfo = self.fetchedResultsController.sections![section]
         return sectionInfo.numberOfObjects
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+        let cellIdentifier = "TransactionTableViewCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! TransactionTableViewCell
+        
+        //cell.test
         self.configureCell(cell, atIndexPath: indexPath)
         return cell
     }
@@ -153,9 +191,13 @@ class TransactionTableViewController: UITableViewController, NSFetchedResultsCon
         }
     }
 
-    func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
+    func configureCell(cell: TransactionTableViewCell, atIndexPath indexPath: NSIndexPath) {
         let object = self.fetchedResultsController.objectAtIndexPath(indexPath)
-        cell.textLabel!.text = object.valueForKey("title")!.description
+        cell.titleLabel.text = object.valueForKey("title")!.description as String
+        cell.costLabel.text = object.valueForKey("cost")!.description as String
+        //cell.titleLabel.text = "Test";
+        //cell.costLabel.text = "Cost";
+        
     }
 
     // MARK: - Fetched results controller
@@ -219,7 +261,7 @@ class TransactionTableViewController: UITableViewController, NSFetchedResultsCon
             case .Delete:
                 tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Fade)
             case .Update:
-                self.configureCell(tableView.cellForRowAtIndexPath(indexPath!)!, atIndexPath: indexPath!)
+                self.configureCell(tableView.cellForRowAtIndexPath(indexPath!)! as! TransactionTableViewCell, atIndexPath: indexPath!)
             case .Move:
                 tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Fade)
                 tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: .Fade)
