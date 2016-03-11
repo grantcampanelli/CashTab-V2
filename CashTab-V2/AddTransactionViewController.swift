@@ -12,9 +12,7 @@ import UIKit
 class AddTranscationViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        
     }
 
     @IBOutlet weak var titleLabel: UILabel!
