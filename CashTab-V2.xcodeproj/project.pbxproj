@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A286EED1C989A1B00AB0690 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A286EEC1C989A1B00AB0690 /* Transaction.swift */; };
+		6A286EEF1C989D6B00AB0690 /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A286EEE1C989D6B00AB0690 /* CategoryPickerViewController.swift */; };
 		6A8105D31C92907E00B994B6 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8105D21C92907E00B994B6 /* TransactionTableViewCell.swift */; };
+		6A9D43201C9894CC008D371D /* AddTransactionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9D431F1C9894CC008D371D /* AddTransactionTableViewController.swift */; };
 		6AED2BC51C922FBB00404DE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AED2BC41C922FBB00404DE1 /* AppDelegate.swift */; };
 		6AED2BC81C922FBB00404DE1 /* CashTab_V2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6AED2BC61C922FBB00404DE1 /* CashTab_V2.xcdatamodeld */; };
 		6AED2BCA1C922FBB00404DE1 /* TransactionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AED2BC91C922FBB00404DE1 /* TransactionTableViewController.swift */; };
@@ -21,7 +24,10 @@
 
 /* Begin PBXFileReference section */
 		0ED036883B86712673149378 /* Pods_CashTab_V2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CashTab_V2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A286EEC1C989A1B00AB0690 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		6A286EEE1C989D6B00AB0690 /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
 		6A8105D21C92907E00B994B6 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		6A9D431F1C9894CC008D371D /* AddTransactionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTransactionTableViewController.swift; sourceTree = "<group>"; };
 		6AED2BC11C922FBB00404DE1 /* CashTab-V2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CashTab-V2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AED2BC41C922FBB00404DE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AED2BC71C922FBB00404DE1 /* CashTab_V2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CashTab_V2.xcdatamodel; sourceTree = "<group>"; };
@@ -65,6 +71,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6A286EEB1C989A0C00AB0690 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6A286EEC1C989A1B00AB0690 /* Transaction.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		6AED2BB81C922FBB00404DE1 = {
 			isa = PBXGroup;
 			children = (
@@ -87,11 +101,14 @@
 			isa = PBXGroup;
 			children = (
 				6AED2BC41C922FBB00404DE1 /* AppDelegate.swift */,
-				6AED2BC91C922FBB00404DE1 /* TransactionTableViewController.swift */,
+				6AED2BDB1C9239A000404DE1 /* AddTransactionViewController.swift */,
 				6A8105D21C92907E00B994B6 /* TransactionTableViewCell.swift */,
 				6AED2BCB1C922FBB00404DE1 /* TransactionDetailViewController.swift */,
-				6AED2BDB1C9239A000404DE1 /* AddTransactionViewController.swift */,
+				6AED2BC91C922FBB00404DE1 /* TransactionTableViewController.swift */,
+				6A9D431F1C9894CC008D371D /* AddTransactionTableViewController.swift */,
+				6A286EEB1C989A0C00AB0690 /* Model */,
 				6AED2BCD1C922FBB00404DE1 /* Main.storyboard */,
+				6A286EEE1C989D6B00AB0690 /* CategoryPickerViewController.swift */,
 				6AED2BD01C922FBB00404DE1 /* Assets.xcassets */,
 				6AED2BD21C922FBB00404DE1 /* LaunchScreen.storyboard */,
 				6AED2BD51C922FBB00404DE1 /* Info.plist */,
@@ -222,7 +239,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A286EEF1C989D6B00AB0690 /* CategoryPickerViewController.swift in Sources */,
 				6AED2BC81C922FBB00404DE1 /* CashTab_V2.xcdatamodeld in Sources */,
+				6A9D43201C9894CC008D371D /* AddTransactionTableViewController.swift in Sources */,
+				6A286EED1C989A1B00AB0690 /* Transaction.swift in Sources */,
 				6AED2BC51C922FBB00404DE1 /* AppDelegate.swift in Sources */,
 				6AED2BDC1C9239A000404DE1 /* AddTransactionViewController.swift in Sources */,
 				6AED2BCA1C922FBB00404DE1 /* TransactionTableViewController.swift in Sources */,

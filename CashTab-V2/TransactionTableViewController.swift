@@ -91,7 +91,7 @@ class TransactionTableViewController: UITableViewController, NSFetchedResultsCon
         }
     }
     
-    
+/*
     @IBAction func addNewTransactionButton(sender: AnyObject) {
         
         let alert = UIAlertController(title: "New Transaction", message: "Add a new transaction", preferredStyle: .Alert)
@@ -132,6 +132,7 @@ class TransactionTableViewController: UITableViewController, NSFetchedResultsCon
         // Display the Alert View Controller on-screen
         presentViewController(alert, animated: true, completion: nil)
     }
+*/
 
     // MARK: - Segues
 
@@ -281,5 +282,46 @@ class TransactionTableViewController: UITableViewController, NSFetchedResultsCon
      }
      */
 
+    
+    
+    /* Save transcation code */
+//    @IBAction func cancelToPlayersViewController(segue:UIStoryboardSegue) {
+//    }
+    
+    @IBAction func saveTransaction(segue:UIStoryboardSegue) {
+        if let addTransactionViewController = segue.sourceViewController as? AddTransactionTableViewController {
+            
+            //add the new player to the players array
+            if let transaction = addTransactionViewController.transaction {
+                let context = self.fetchedResultsController.managedObjectContext
+                let entity = self.fetchedResultsController.fetchRequest.entity!
+                let newManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entity.name!, inManagedObjectContext: context)
+                
+                // If appropriate, configure the new managed object.
+                // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
+                newManagedObject.setValue(transaction.title, forKey: "title")
+                 newManagedObject.setValue(transaction.cost, forKey: "cost")
+                 newManagedObject.setValue(transaction.category, forKey: "category")
+                
+                // Save the context.
+                do {
+                    try context.save()
+                } catch {
+                    // Replace this implementation with code to handle the error appropriately.
+                    // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                    //print("Unresolved error \(error), \(error.userInfo)")
+                    abort()
+                }
+
+                
+//                players.append(player)
+//                
+//                //update the tableView
+//                let indexPath = NSIndexPath(forRow: players.count-1, inSection: 0)
+//                tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            }
+        }
+    }
+    
 }
 
