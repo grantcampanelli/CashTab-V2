@@ -1,5 +1,5 @@
 //
-//  CategoryPickerViewController.swift
+//  TransactionsByCategoryVC.swift
 //  CashTab-V2
 //
 //  Created by Grant Campanelli on 3/15/16.
@@ -8,11 +8,8 @@
 
 import UIKit
 
-class CategoryPickerViewController: UITableViewController {
+class TransactionsByCategoryVC: UITableViewController {
 
-    var categories = ["Food", "Fitness", "Shopping", "Business", "Reimbursable", "Miscellaneous"];
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,67 +29,23 @@ class CategoryPickerViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return categories.count
+        return 0
     }
 
-    
+    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("CategoryCell", forIndexPath: indexPath)
-        cell.textLabel?.text = categories[indexPath.row];
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+
         // Configure the cell...
 
-        if indexPath.row == selectedCategoryIndex {
-            cell.accessoryType = .Checkmark
-        } else {
-            cell.accessoryType = .None
-        }
         return cell
     }
-    
-    
-    
-    var selectedCategory:String? {
-        didSet {
-            if let category = selectedCategory {
-                selectedCategoryIndex = categories.indexOf(category)!
-            }
-        }
-    }
-    var selectedCategoryIndex:Int?
-    
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        
-        //Other row is selected - need to deselect it
-        if let index = selectedCategoryIndex {
-            let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: index, inSection: 0))
-            cell?.accessoryType = .None
-        }
-        
-        selectedCategory = categories[indexPath.row]
-        
-        //update the checkmark for the current row
-        let cell = tableView.cellForRowAtIndexPath(indexPath)
-        cell?.accessoryType = .Checkmark
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "SaveSelectedCategory" {
-            if let cell = sender as? UITableViewCell {
-                let indexPath = tableView.indexPathForCell(cell)
-                if let index = indexPath?.row {
-                    selectedCategory = categories[index]
-                }
-            }
-        }
-    }
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.

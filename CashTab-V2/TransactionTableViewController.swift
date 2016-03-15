@@ -302,6 +302,8 @@ class TransactionTableViewController: UITableViewController, NSFetchedResultsCon
                 newManagedObject.setValue(transaction.title, forKey: "title")
                  newManagedObject.setValue(transaction.cost, forKey: "cost")
                  newManagedObject.setValue(transaction.category, forKey: "category")
+                newManagedObject.setValue(transaction.date, forKey: "date")
+                newManagedObject.setValue(transaction.paymentMethod, forKey: "paymentMethod")
                 
                 // Save the context.
                 do {

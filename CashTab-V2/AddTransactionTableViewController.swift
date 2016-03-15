@@ -13,7 +13,8 @@ class AddTransactionTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupDatePicker()
+        initTodaysDate()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -99,6 +100,10 @@ class AddTransactionTableViewController: UITableViewController {
 
     @IBOutlet weak var category: UILabel!
     
+    
+    @IBOutlet weak var paymentMethodTextField: UILabel!
+
+    
     var transaction: Transaction?
     
     var categoryVar:String = "Miscellaneous" {
@@ -107,10 +112,27 @@ class AddTransactionTableViewController: UITableViewController {
         }
     }
     
+    var paymentVar:String = "Cash" {
+        didSet {
+            paymentMethodTextField.text? = paymentVar
+        }
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SaveTransactionDetail" {
-            transaction = Transaction(title: titleTextField.text, cost: costTextField.text, category: categoryVar)
+            transaction = Transaction(title: titleTextField.text, cost: costTextField.text, category: categoryVar, date: dateVar, paymentMethod: paymentVar);
         }
+        if segue.identifier == "PickCategory" {
+            if let categoryPickerViewController = segue.destinationViewController as? CategoryPickerViewController {
+                categoryPickerViewController.selectedCategory = categoryVar
+            }
+        }
+        if segue.identifier == "PickPaymentMethod" {
+            if let paymentPickerViewController = segue.destinationViewController as? PaymentMethodPickerVC {
+                paymentPickerViewController.selectedPayment = paymentVar
+            }
+        }
+
     }
     
     @IBAction func unwindWithSelectedCategory(segue:UIStoryboardSegue) {
@@ -119,6 +141,120 @@ class AddTransactionTableViewController: UITableViewController {
                 categoryVar = selectedCategory
         }
     }
+    
+    @IBAction func unwindWithSelectedPayment(segue:UIStoryboardSegue) {
+        if let paymentPickerViewController = segue.sourceViewController as? PaymentMethodPickerVC,
+            selectedPayment = paymentPickerViewController.selectedPayment {
+                paymentVar = selectedPayment
+        }
+    }
+    
+    
+    @IBOutlet weak var dateTextField: UITextField!
+    var dateVar: NSDate?
+    
+    func setupDatePicker() {
+        
+        let toolBar = UIToolbar(frame: CGRectMake(0, self.view.frame.size.height/6, self.view.frame.size.width, 40.0))
+        
+        toolBar.layer.position = CGPoint(x: self.view.frame.size.width/2, y: self.view.frame.size.height-20.0)
+        
+        toolBar.barStyle = UIBarStyle.BlackTranslucent
+        
+        toolBar.tintColor = UIColor.whiteColor()
+        
+        toolBar.backgroundColor = UIColor.blackColor()
+        
+        
+        let todayBtn = UIBarButtonItem(title: "Today", style: UIBarButtonItemStyle.Plain, target: self, action: "tappedToolBarBtn:")
+        
+        let okBarBtn = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: "donePressed:")
+        
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: self, action: nil)
+        
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width / 3, height: self.view.frame.size.height))
+        
+        label.font = UIFont(name: "Helvetica", size: 12)
+        
+        label.backgroundColor = UIColor.clearColor()
+        
+        label.textColor = UIColor.whiteColor()
+        
+        label.text = "Select a due date"
+        
+        label.textAlignment = NSTextAlignment.Center
+        
+        let textBtn = UIBarButtonItem(customView: label)
+        
+        toolBar.setItems([todayBtn,flexSpace,textBtn,flexSpace,okBarBtn], animated: true)
+        
+        dateTextField.inputAccessoryView = toolBar
+        
+    }
+    
+    
+    func donePressed(sender: UIBarButtonItem) {
+        
+        dateTextField.resignFirstResponder()
+        
+    }
+    
+    func initTodaysDate() {
+        let dateformatter = NSDateFormatter()
+        
+        dateformatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        
+        dateformatter.timeStyle = NSDateFormatterStyle.NoStyle
+        
+        dateVar = NSDate();
+        dateTextField.text = dateformatter.stringFromDate(NSDate())
+    }
+    
+    func tappedToolBarBtn(sender: UIBarButtonItem) {
+        
+        let dateformatter = NSDateFormatter()
+        
+        dateformatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        
+        dateformatter.timeStyle = NSDateFormatterStyle.NoStyle
+        
+        dateVar = NSDate();
+        dateTextField.text = dateformatter.stringFromDate(NSDate())
+        
+        dateTextField.resignFirstResponder()
+    }
+
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    @IBAction func textFieldEditing(sender: UITextField) {
+        
+        let datePickerView: UIDatePicker = UIDatePicker()
+        
+        datePickerView.datePickerMode = UIDatePickerMode.Date
+        
+        sender.inputView = datePickerView
+        
+        datePickerView.addTarget(self, action: Selector("datePickerValueChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+        
+    }
+    
+    func datePickerValueChanged(sender: UIDatePicker) {
+        
+        let dateFormatter = NSDateFormatter()
+        
+        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        
+        dateFormatter.timeStyle = NSDateFormatterStyle.NoStyle
+        
+        dateVar = sender.date
+        dateTextField.text = dateFormatter.stringFromDate(sender.date)
+        
+    }
+
+    
+    
     
 //    let context = self.fetchedResultsController.managedObjectContext
 //    let entity = self.fetchedResultsController.fetchRequest.entity!
