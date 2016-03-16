@@ -8,11 +8,14 @@
 
 import CoreData
 import UIKit
+import RealmSwift
 
 class TransactionDetailViewController: UITableViewController {
 
    
-
+    
+    var detailItemIndex: Int?
+    
     var detailItem: AnyObject? {
         didSet {
             // Update the view.
@@ -23,11 +26,15 @@ class TransactionDetailViewController: UITableViewController {
     func configureView() {
          //Update the user interface for the detail item.
         if let detail = self.detailItem {
-            if let title = self.transactionTitleLabel {
-                title.text = detail.valueForKey("title")!.description
+            if let vendor = self.transactionTitleLabel {
+                vendor.text = detail.valueForKey("vendor")!.description
             }
             if let cost = self.transactionCostLabel {
-                cost.text = detail.valueForKey("cost")!.description
+                let ns = NSNumberFormatter().numberFromString(detail.valueForKey("cost")!.description);
+                let num = ns?.doubleValue
+                cost.text = "$" + (NSString(format:"%.2f", num!) as String)
+
+                //cost.text = "$" + detail.valueForKey("cost")!.description
             }
             if let date = self.transactionDateLabel {
                 let newDate = detail.valueForKey("date") as! NSDate
@@ -51,7 +58,6 @@ class TransactionDetailViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
         self.configureView()
     }
 
@@ -89,17 +95,28 @@ class TransactionDetailViewController: UITableViewController {
     }
     
     func updateItemCategory(newCategory: String) {
-        let detail = self.detailItem as! NSManagedObject
+        //let detail = self.detailItem as! NSManagedObject
         
-        if(detail.valueForKey("category")!.description != newCategory) {
-            detail.setValue(newCategory, forKey: "category")
+        if(self.detailItem != nil && (self.detailItem!.valueForKey("category")!.description != newCategory)){
             
-            // Save the context.®
-            do {
-                try detail.managedObjectContext?.save()
-            } catch {
-                abort()
+            let realm = try! Realm()
+            let transactionObjects = realm.objects(TModel).sorted("vendor")
+            //transactionObjects[detailItemIndex!].category = newCategory
+            
+            try! realm.write {
+                transactionObjects[detailItemIndex!].setValue(newCategory, forKeyPath: "category")
+                //realm.create(TModel.self, value: ["category": newCategory], update: true)
+                // the book's `title` property will remain unchanged.
             }
+            
+//            detail.setValue(newCategory, forKey: "category")
+//            
+//            // Save the context.®
+//            do {
+//                try detail.managedObjectContext?.save()
+//            } catch {
+//                abort()
+//            }
 
         }
         

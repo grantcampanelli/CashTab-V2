@@ -6,5 +6,6 @@ use_frameworks!
 target 'CashTab-V2' do
    pod 'DropDown'
    pod 'Validator'
+   pod 'RealmSwift'
 end
 

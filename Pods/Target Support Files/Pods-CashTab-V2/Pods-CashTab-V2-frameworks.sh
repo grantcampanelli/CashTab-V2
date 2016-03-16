@@ -85,9 +85,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$CONFIGURATION_BUILD_DIR/DropDown/DropDown.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/Realm/Realm.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/RealmSwift/RealmSwift.framework"
   install_framework "$CONFIGURATION_BUILD_DIR/Validator/Validator.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$CONFIGURATION_BUILD_DIR/DropDown/DropDown.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/Realm/Realm.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/RealmSwift/RealmSwift.framework"
   install_framework "$CONFIGURATION_BUILD_DIR/Validator/Validator.framework"
 fi

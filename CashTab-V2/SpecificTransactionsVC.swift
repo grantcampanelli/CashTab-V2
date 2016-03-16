@@ -7,17 +7,31 @@
 //
 
 import UIKit
+import RealmSwift
 
 class SpecificTransactionsVC: UITableViewController {
 
     var category: String?
+    let realm = try! Realm()
+    var transactionsByCat = try! Realm().objects(TModel).sorted("vendor")
+   // let realm = try! Realm()
+    //let array =
+
+   //@IBOutlet weak var vendorLabel: UILabel!
+    //@IBOutlet weak var costLabel: UILabel!
     
     @IBOutlet weak var categoryPageTitle: UINavigationItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.navigationItem.title = self.category
+        let cat = self.category
+        print(cat)
+        let predicate = NSPredicate(format: "category == %@", cat!)
+        transactionsByCat = transactionsByCat.filter(predicate)
+        print(transactionsByCat)
+        //let cats = try Realm().objects(TModel).filter("category == 'Food'")
+        //self.tByCat = cats
+        self.navigationItem.title = cat
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -35,23 +49,27 @@ class SpecificTransactionsVC: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return transactionsByCat.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("tByCategory", forIndexPath: indexPath)
+        cell.textLabel!.text = self.transactionsByCat[indexPath.row].vendor
 
-        // Configure the cell...
+        let ns = NSNumberFormatter().numberFromString(self.transactionsByCat[indexPath.row].cost!);
+        let num = ns?.doubleValue
+        cell.detailTextLabel!.text = "$" + (NSString(format:"%.2f", num!) as String)
+
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

@@ -10,15 +10,15 @@ import UIKit
 import CoreData
 
 struct Transaction {
-    var title: String?
+    var vendor: String?
     var cost: String?
     var category: String?
     var date: NSDate?
     var paymentMethod: String?
     
-    init(title: String?, cost: String?, category: String?,
+    init(vendor: String?, cost: String?, category: String?,
         date: NSDate?, paymentMethod: String?) {
-        self.title = title
+        self.vendor = vendor
         self.cost = cost
         self.category = category
         self.date = date

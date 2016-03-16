@@ -120,7 +120,7 @@ class AddTransactionTableViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SaveTransactionDetail" {
-            transaction = Transaction(title: titleTextField.text, cost: costTextField.text, category: categoryVar, date: dateVar, paymentMethod: paymentVar);
+            transaction = Transaction(vendor: titleTextField.text, cost: costTextField.text, category: categoryVar, date: dateVar, paymentMethod: paymentVar);
         }
         if segue.identifier == "PickCategory" {
             if let categoryPickerViewController = segue.destinationViewController as? CategoryPickerViewController {

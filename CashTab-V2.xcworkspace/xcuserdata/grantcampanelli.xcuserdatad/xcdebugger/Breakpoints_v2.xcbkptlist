@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
             endingLineNumber = "21"
-            landmarkName = "init(title:cost:category:date:paymentMethod:)"
+            landmarkName = "init(vendor:cost:category:date:paymentMethod:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +41,185 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+            filePath = "CashTab-V2/TransactionTableViewController.swift"
+            timestampString = "479792822.508568"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "TransactionTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CashTab_V2.TransactionTableViewController.transactionObjects.getter : RealmSwift.Results&lt;CashTab_V2.TModel&gt;"
+                  moduleName = "CashTab-V2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/grantcampanelli/Dropbox/CashTab-V2/CashTab-V2/TransactionTableViewController.swift"
+                  timestampString = "479792822.560695"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CashTab_V2.TransactionTableViewController.transactionObjects.setter : RealmSwift.Results&lt;CashTab_V2.TModel&gt;"
+                  moduleName = "CashTab-V2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/grantcampanelli/Dropbox/CashTab-V2/CashTab-V2/TransactionTableViewController.swift"
+                  timestampString = "479792822.561715"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CashTab_V2.TransactionTableViewController.transactionObjects.materializeForSet : RealmSwift.Results&lt;CashTab_V2.TModel&gt;"
+                  moduleName = "CashTab-V2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/grantcampanelli/Dropbox/CashTab-V2/CashTab-V2/TransactionTableViewController.swift"
+                  timestampString = "479792822.561835"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CashTab_V2.TransactionTableViewController.init (CashTab_V2.TransactionTableViewController.Type)(style : __C.UITableViewStyle) -&gt; CashTab_V2.TransactionTableViewController"
+                  moduleName = "CashTab-V2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/grantcampanelli/Dropbox/CashTab-V2/CashTab-V2/TransactionTableViewController.swift"
+                  timestampString = "479792822.561933"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "436">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CashTab_V2.TransactionTableViewController.init (CashTab_V2.TransactionTableViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; CashTab_V2.TransactionTableViewController"
+                  moduleName = "CashTab-V2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/grantcampanelli/Dropbox/CashTab-V2/CashTab-V2/TransactionTableViewController.swift"
+                  timestampString = "479792822.562023"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "514">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CashTab_V2.TransactionTableViewController.init (CashTab_V2.TransactionTableViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;CashTab_V2.TransactionTableViewController&gt;"
+                  moduleName = "CashTab-V2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/grantcampanelli/Dropbox/CashTab-V2/CashTab-V2/TransactionTableViewController.swift"
+                  timestampString = "479792822.562107"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "436">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
             filePath = "CashTab-V2/TransactionDetailViewController.swift"
-            timestampString = "479777585.296568"
+            timestampString = "479803171.654253"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "99"
             endingLineNumber = "99"
             landmarkName = "updateItemCategory(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CashTab-V2/TransactionDetailViewController.swift"
+            timestampString = "479803171.654253"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "updateItemCategory(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CashTab-V2/TransactionDetailViewController.swift"
+            timestampString = "479803171.654253"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "updateItemCategory(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CashTab-V2/SpecificTransactionsVC.swift"
+            timestampString = "479798099.373144"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CashTab-V2/TransactionsByCategoryVC.swift"
+            timestampString = "479800045.667627"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

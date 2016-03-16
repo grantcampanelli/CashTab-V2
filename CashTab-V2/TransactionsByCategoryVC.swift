@@ -7,20 +7,103 @@
 //
 
 import UIKit
+import CoreData
+import RealmSwift
 
-class TransactionsByCategoryVC: UITableViewController {
-
+class TransactionsByCategoryVC: UITableViewController, NSFetchedResultsControllerDelegate {
+    let realm = try! Realm()
+    //let categoryObjects = try! Realm().objects(CModel).sorted("name")
     var categories = ["Food", "Fitness", "Shopping", "Business", "Reimbursable", "Miscellaneous"];
+    var managedObjectContext: NSManagedObjectContext? = nil
+    var transactionsByCat = try! Realm().objects(TModel).sorted("vendor")
+    
+//    private var tb: UITableView?
+//    
+//    override func viewWillAppear(animated: Bool) {
+//        super.viewWillAppear(animated)
+//        self.transactionsByCat = try! Realm().objects(TModel).sorted("vendor")
+//        
+//        tb?.reloadData()   // ...and it is also visible here.
+//    }
     
     override func viewDidLoad() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadTableData:", name: "reload", object: nil)
         super.viewDidLoad()
-
+        //fetchAllTransactions()
+        //self.managedObjectContext
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    func reloadTableData(notification: NSNotification) {
+        tableView.reloadData()
+    }
+    
+//    func fetchAllTransactions() {
+////        // Initialize Fetch Request
+//        let fetchRequest = NSFetchRequest()
+//        
+//        // Create Entity Description
+//        let entity = NSEntityDescription.entityForName("Transaction", inManagedObjectContext: self.managedObjectContext!)
+//        fetchRequest.entity = entity
+//        
+//        // Configure Fetch Request
+//        
+//        do {
+//            let result = try self.managedObjectContext!.executeFetchRequest(fetchRequest)
+//            print(result)
+//            
+//        } catch {
+//            let fetchError = error as NSError
+//            print(fetchError)
+//        }
+//    }
+    
+//    
+//    @IBAction func addCategory(sender: AnyObject) {
+//        
+//        let alert = UIAlertController(title: "New Category", message: "Add a new category", preferredStyle: .Alert)
+//        
+//        //Setting up Save Action
+//        //Takes whatever text is in the textfield and puts it into the Transactions array
+//        let saveAction = UIAlertAction(title: "Save",
+//            style: .Default,
+//            handler: { (action:UIAlertAction) -> Void in
+//                let categoryName = alert.textFields![0]
+//                //let transactionCost = alert.textFields![1]
+//                self.addCategoryToRealm(categoryName.text!)
+//                //self.reloadData()
+//                
+//        })
+//        
+//        //Setting up Cancel Action
+//        let cancelAction = UIAlertAction(title: "Cancel", style: .Default) {
+//            (action: UIAlertAction) -> Void in
+//        }
+//        
+//        //Configure the alert controller - Add a textfield in the alert
+//        alert.addTextFieldWithConfigurationHandler {
+//            (textField: UITextField) -> Void in
+//        }
+//        
+//        
+//       // Add the "Save" and "Cancel" actions to the alert controller
+//        alert.addAction(saveAction)
+//        alert.addAction(cancelAction)
+//        
+//        //Display the Alert View Controller on-screen
+//        presentViewController(alert, animated: true, completion: nil)
+//    }
+//    
+//    func addCategoryToRealm(categoryName : String) {
+//        realm.beginWrite()
+//        realm.create(CModel.self, value: ["name": categoryName])
+//        try! realm.commitWrite()
+//        print(realm.objects(CModel))
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -42,7 +125,20 @@ class TransactionsByCategoryVC: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Category", forIndexPath: indexPath)
-        cell.textLabel?.text = categories[indexPath.row];
+        let cat = categories[indexPath.row]
+        let predicate = NSPredicate(format: "category == %@", cat)
+        //let catTransactions = transactionsByCat.filter(predicate)
+        var total = 0.0
+        for t in realm.objects(TModel).filter(predicate) {
+            let num = NSNumberFormatter().numberFromString(t.cost!);
+            total += (num?.doubleValue)!
+        }
+        //print(total)
+        //let str = NSNumberFormatter().stringFromNumber(total)
+
+        
+        cell.textLabel?.text = cat;
+        cell.detailTextLabel?.text = "$"  + (NSString(format:"%.2f", total) as String)
         // Configure the cell...
        
         return cell

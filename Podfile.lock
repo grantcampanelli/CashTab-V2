@@ -1,15 +1,23 @@
 PODS:
   - DropDown (0.1.4)
+  - Realm (0.98.5):
+    - Realm/Headers (= 0.98.5)
+  - Realm/Headers (0.98.5)
+  - RealmSwift (0.98.5):
+    - Realm (= 0.98.5)
   - Validator (1.1.1)
 
 DEPENDENCIES:
   - DropDown
+  - RealmSwift
   - Validator
 
 SPEC CHECKSUMS:
   DropDown: 09ab078ba0f11d426689526b45d4d5179420e321
+  Realm: db08379969e45cea2edd1c3c0a090fe9e22d2d2f
+  RealmSwift: cb11ad1c35e15dc982f2dbf5afe2a3124193a358
   Validator: e17f25fe03c32590be0a9d7d46a779c9ec5dd3b3
 
-PODFILE CHECKSUM: f7b0310de7a0de53de8f0458f53cdf4e3da54ca2
+PODFILE CHECKSUM: 072c1c69128c856dff1d0f8746fa228ade5a45eb
 
 COCOAPODS: 1.0.0.beta.5
