@@ -21,50 +21,6 @@
             </objects>
             <point key="canvasLocation" x="-38" y="-630"/>
         </scene>
-        <!--Detail-->
-        <scene sceneID="yUG-lL-AsK">
-            <objects>
-                <viewController title="Detail" id="JEX-9P-axG" customClass="TransactionDetailViewController" customModule="CashTab_V2" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SYR-Wa-9uf"/>
-                        <viewControllerLayoutGuide type="bottom" id="GAO-Cl-Wes"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="svH-Pt-448">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0XM-y9-sOw">
-                                <rect key="frame" x="20" y="292" width="560" height="17"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shn-5e-cwB">
-                                <rect key="frame" x="250" y="328" width="101" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="0XM-y9-sOw" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" constant="20" symbolic="YES" id="Tsc-yG-G1q"/>
-                            <constraint firstItem="0XM-y9-sOw" firstAttribute="centerY" secondItem="svH-Pt-448" secondAttribute="centerY" id="jWN-iV-94e"/>
-                            <constraint firstAttribute="trailing" secondItem="0XM-y9-sOw" secondAttribute="trailing" constant="20" symbolic="YES" id="tHV-ZD-HQj"/>
-                        </constraints>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Transaction Detail" id="mOI-FS-AaM"/>
-                    <connections>
-                        <outlet property="detailDescriptionLabel" destination="0XM-y9-sOw" id="deQ-Na-JPF"/>
-                        <outlet property="transcationCategory" destination="Shn-5e-cwB" id="WB8-mx-rHJ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2786" y="1154"/>
-        </scene>
         <!--Transaction-->
         <scene sceneID="5Hx-72-2RB">
             <objects>
@@ -197,7 +153,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c1z-NI-N9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="663" y="129"/>
+            <point key="canvasLocation" x="1939" y="234"/>
         </scene>
         <!--Transactions-->
         <scene sceneID="Nki-YV-4Qg">
@@ -212,7 +168,7 @@
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZU-Oi-B1e" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-856" y="-330"/>
+            <point key="canvasLocation" x="-736" y="234"/>
         </scene>
         <!--Master-->
         <scene sceneID="smW-Zh-WAh">
@@ -276,7 +232,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="709" y="-630"/>
+            <point key="canvasLocation" x="981" y="-630"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jKM-Ug-i9C">
@@ -294,7 +250,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j6G-bA-s75" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1786" y="-1212"/>
+            <point key="canvasLocation" x="1939" y="-630"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r7l-gg-dq7">
@@ -309,7 +265,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-45" y="129"/>
+            <point key="canvasLocation" x="981" y="234"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="TrQ-eP-3Ps">
@@ -334,7 +290,7 @@
                     <items/>
                 </tabBar>
             </objects>
-            <point key="canvasLocation" x="-1728" y="356"/>
+            <point key="canvasLocation" x="-1880" y="816"/>
         </scene>
         <!--Categories-->
         <scene sceneID="Zcz-i8-0Sr">
@@ -363,7 +319,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GeN-Mz-fHD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="150" y="1224"/>
+            <point key="canvasLocation" x="-38" y="1232"/>
         </scene>
         <!--Categories-->
         <scene sceneID="78R-VR-GDL">
@@ -380,7 +336,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LH0-23-xaU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-670" y="1224"/>
+            <point key="canvasLocation" x="-736" y="1220"/>
         </scene>
         <!--Add Transaction-->
         <scene sceneID="yB9-6y-b8d">
@@ -523,7 +479,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jdv-dH-05C" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="3tN-rB-Cdw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2750" y="-1266"/>
+            <point key="canvasLocation" x="2863" y="-630"/>
         </scene>
         <!--Category-->
         <scene sceneID="Ber-2r-d8a">
@@ -565,7 +521,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kfi-VG-7VU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="l9o-L5-Z3T" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2139" y="-158"/>
+            <point key="canvasLocation" x="2863" y="234"/>
         </scene>
         <!--Payment Method-->
         <scene sceneID="r8b-TK-xEQ">
@@ -607,11 +563,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VXb-so-voa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Znu-kR-jhv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3684" y="-1084"/>
+            <point key="canvasLocation" x="3672" y="-630"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6S0-TO-JiA"/>
+        <segue reference="Tll-UG-LXB"/>
         <segue reference="n2m-Bd-sL2"/>
     </inferredMetricsTieBreakers>
 </document>
