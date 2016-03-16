@@ -1,5 +1,5 @@
 //
-//  TransactionsByCategoryVC.swift
+//  SpecificTransactionsVC.swift
 //  CashTab-V2
 //
 //  Created by Grant Campanelli on 3/15/16.
@@ -8,13 +8,17 @@
 
 import UIKit
 
-class TransactionsByCategoryVC: UITableViewController {
+class SpecificTransactionsVC: UITableViewController {
 
-    var categories = ["Food", "Fitness", "Shopping", "Business", "Reimbursable", "Miscellaneous"];
+    var category: String?
+    
+    @IBOutlet weak var categoryPageTitle: UINavigationItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationItem.title = self.category
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -31,35 +35,23 @@ class TransactionsByCategoryVC: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return categories.count
+        return 0
     }
 
-    
+    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Category", forIndexPath: indexPath)
-        cell.textLabel?.text = categories[indexPath.row];
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+
         // Configure the cell...
-       
+
         return cell
-
     }
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "ShowTransactionsByCategory" {
-            if let indexPath = self.tableView.indexPathForSelectedRow?.row {
-                let controller = segue.destinationViewController as! SpecificTransactionsVC
-                controller.category = categories[indexPath];
-                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
-                controller.navigationItem.leftItemsSupplementBackButton = true
-            }
-        }
-        
-    }
+    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -106,5 +98,4 @@ class TransactionsByCategoryVC: UITableViewController {
     }
     */
 
-    
 }
