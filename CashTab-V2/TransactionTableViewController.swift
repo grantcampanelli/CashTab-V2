@@ -59,7 +59,7 @@ class TransactionTableViewController: UITableViewController, NSFetchedResultsCon
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? TransactionDetailViewController
         }
-        testRealm()
+       // testRealm()
     }
     func setupTotalCostLabel() {
         var total = 0.0
@@ -71,12 +71,12 @@ class TransactionTableViewController: UITableViewController, NSFetchedResultsCon
 
     }
 
-    func testRealm() {
-        let categoryObjects = try! Realm().objects(CModel).sorted("name")
-        print(categoryObjects)
-        let transactionObjects = try! Realm().objects(TModel).sorted("vendor")
-        print(transactionObjects)
-    }
+//    func testRealm() {
+//        let categoryObjects = try! Realm().objects(CModel).sorted("name")
+//        print(categoryObjects)
+//        let transactionObjects = try! Realm().objects(TModel).sorted("vendor")
+//        print(transactionObjects)
+//    }
     
     override func viewWillAppear(animated: Bool) {
         self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed
@@ -225,6 +225,7 @@ class TransactionTableViewController: UITableViewController, NSFetchedResultsCon
             }
             //self.transactionObjects = try! Realm().objects(TModel).sorted("vendor")
             tableView.reloadData()
+            NSNotificationCenter.defaultCenter().postNotificationName("reload", object: nil)
             setupTotalCostLabel()
 //
 //            let context = self.fetchedResultsController.managedObjectContext
@@ -366,7 +367,7 @@ class TransactionTableViewController: UITableViewController, NSFetchedResultsCon
                 tableView.reloadData()
                 NSNotificationCenter.defaultCenter().postNotificationName("reload", object: nil)
                 setupTotalCostLabel()
-                testRealm()
+                //testRealm()
                 //realm.beginWrite()
                 //realm.create(TModel.self, value: )
                 

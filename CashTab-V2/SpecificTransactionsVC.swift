@@ -32,6 +32,7 @@ class SpecificTransactionsVC: UITableViewController {
         //let cats = try Realm().objects(TModel).filter("category == 'Food'")
         //self.tByCat = cats
         self.navigationItem.title = cat
+        setupTotalCostLabel()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -57,6 +58,17 @@ class SpecificTransactionsVC: UITableViewController {
         return transactionsByCat.count
     }
 
+    @IBOutlet weak var totalByCategory: UILabel!
+    
+    func setupTotalCostLabel() {
+        var total = 0.0
+        for t in self.transactionsByCat {
+            let num = NSNumberFormatter().numberFromString(t.cost!);
+            total += (num?.doubleValue)!
+        }
+        totalByCategory.text! = "$"  + (NSString(format:"%.2f", total) as String)
+        
+    }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("tByCategory", forIndexPath: indexPath)
